@@ -20,21 +20,6 @@ const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 const path = require('path');
 
-//middleware to use assets
-
-//sass needs not be run everytime in prod
-// if(env.name == 'development'){
-//   app.use(
-//     sassMiddleware({
-//     src: path.join(__dirname, env.asset_path, 'scss'),
-//     dest: path.join(__dirname, env.asset_path, 'css'),
-//     debug: true,
-//     outputStyle: 'extended',
-//     prefix:  '/css' ,
-//     }
-//   ));
-// }
-
 
 app.use(sassMiddleware({
     src: './assets/scss',
